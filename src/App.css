@@ -1,5 +1,38 @@
 * {
   box-sizing: border-box;
+  color: #555;
   margin: 0;
   padding: 0;
 }
+
+html {
+  background-color: #eee;
+}
+
+header {
+  display: flex;
+
+  vertical-align: middle;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #cdcdcd;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  margin: 4px;
+}
+
+.add-button {
+  margin-right: 16px;
+  text-align: center;
+  font-size: 3em;
+}
+
+
+
+
+
+

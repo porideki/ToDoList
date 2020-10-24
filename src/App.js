@@ -4,7 +4,11 @@ import './App.css';
 function App() {
   return (
     <div>
-      <p>Hello React.</p>
+      <header>
+        <h1 class="title">ToDo</h1>
+        <div class="add-button">+</div>
+      </header>
+      <div id="main"></div>
     </div>
   );
 }
