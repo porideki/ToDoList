@@ -35,7 +35,7 @@ class TaskList extends React.Component {
     var newTasks = [];
     tasks.forEach((element) => {
       //タスクIDが削除対象IDと一致
-      if(element.id != id){
+      if(element.id == id){
         app.delTask(element);
       }
     });
