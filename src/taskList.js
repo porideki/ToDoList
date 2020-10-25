@@ -21,10 +21,28 @@ class TaskList extends React.Component {
           <h2 class="task-title">{task.title}</h2>
           <p class="task-description">{task.description}</p>
         </div>
-        <div class="task-del-button" taskid={task.id}>x</div>
+        <div class="task-del-button" taskid={task.id} onClick={(event)=>this.onClickDelete(event)}>x</div>
       </div>
     );
   }
+
+  onClickDelete(event) {
+    //ボタンの属性からタスクIDを取得
+    var target = event.target;
+    var id = target.getAttribute("taskid");
+    //IDに一致するタスクを削除
+    const {tasks, app} = this.props;
+    var newTasks = [];
+    tasks.forEach((element) => {
+      //タスクIDが削除対象IDと一致"しない"
+      if(element.id != id){
+        newTasks.push(element);
+      }
+    });
+    //新しいタスクリストを反映
+    app.setState({tasks: newTasks});
+  }
+
 }
 
 export default TaskList;

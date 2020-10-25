@@ -22,7 +22,7 @@ class App extends React.Component {
         </header>
         <div id="main">
           <TaskList 
-            tasks={this.state.tasks}/>
+            tasks={this.state.tasks} app={this}/>
         </div>
       </div>
     );
