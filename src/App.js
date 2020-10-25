@@ -28,6 +28,7 @@ class App extends React.Component {
     );
   }
 
+
   addTask() {
     //直接pushしようとするとエラー
     const tasksBuf = this.state.tasks;
@@ -35,6 +36,16 @@ class App extends React.Component {
     this.setState({tasks: tasksBuf});
   }
 
+  //タスクの削除
+  delTask(task) {
+    var newTask = []
+    this.state.tasks.forEach((element) => {
+      if(element.id != task.id) {
+        newTask.push(element);
+      }
+    });
+    this.setState({tasks: newTask});
+  }
 }
 
 export default App;
