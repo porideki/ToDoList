@@ -29,7 +29,36 @@ header {
   margin-right: 16px;
   text-align: center;
   font-size: 3em;
+  cursor: pointer;
 }
+
+#main {
+  padding: 8px;
+}
+
+/*taskList*/
+.task-element-edge{
+  margin: 8px 0;
+}
+
+.task-element {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 8px 16px 8px 16px;
+  align-items: center;
+
+  border-radius: 8px;
+
+  background-color: #cdcdcd;
+  cursor: pointer;
+}
+
+.task-del-button {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
 
 
 
