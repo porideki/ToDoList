@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 import TaskList from './taskList';
-import ReactModal from 'react-modal'; 
+import Modal from 'react-modal';
 import './App.css';
 
 class App extends React.Component {
@@ -19,7 +19,7 @@ class App extends React.Component {
       <div>
         <header>
           <h1 class="title">ToDo List</h1>
-          <div class="add-button" onClick={this.addTask}>+</div>
+          <CreateTaskButton app={this}/>
         </header>
         <div id="main">
           <TaskList 
@@ -30,10 +30,10 @@ class App extends React.Component {
   }
 
 
-  addTask() {
+  addTask(task) {
     //直接pushしようとするとエラー
     const tasksBuf = this.state.tasks;
-    tasksBuf.push({id: (new Date).getTime(), title: "task", description:"desc"});
+    tasksBuf.push(task);
     this.setState({tasks: tasksBuf});
   }
 
@@ -47,6 +47,24 @@ class App extends React.Component {
     });
     this.setState({tasks: newTask});
   }
+
+}
+
+function CreateTaskButton(props) {
+  const [isOpenModal, setIsOpenModal] = useState(false);
+  const openModal = () => {setIsOpenModal(true)};
+  const closeModal = () => {setIsOpenModal(false)};
+  return (
+    <div id="modal-frame">
+      <div class="add-button" onClick={openModal}>+</div>
+      <Modal
+      isOpen={isOpenModal}
+      onRequestClose={closeModal}>
+        <h2>Hello, Modal!</h2>
+        <button onClick={closeModal}>close</button>
+      </Modal>
+    </div>
+  );
 }
 
 export default App;
