@@ -1,5 +1,6 @@
-import React from 'react'
-import TaskList from './taskList'
+import React from 'react';
+import TaskList from './taskList';
+import ReactModal from 'react-modal'; 
 import './App.css';
 
 class App extends React.Component {

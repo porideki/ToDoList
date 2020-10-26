@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 class TaskList extends React.Component {
   render() {
