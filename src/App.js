@@ -60,10 +60,13 @@ class App extends React.Component {
 
 }
 
+//タスクの作成
 function CreateTaskButton(props) {
   //フォーム関係
   const [taskTitle, setTaskTitle] = useState("");
   const [taskDescription, setTaskDescription] = useState("");
+
+  //タスクを作成して追加
   const handleTaskSubmit = (event) => {
     const {app} = props;
     app.addTask({
@@ -73,6 +76,7 @@ function CreateTaskButton(props) {
     });
     closeModal();
   }
+
   //モーダル関係
   const [isOpenModal, setIsOpenModal] = useState(false);
   const openModal = () => {
