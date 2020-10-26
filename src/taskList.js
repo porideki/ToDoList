@@ -1,29 +1,28 @@
 import React, {useState} from 'react';
 import Modal from 'react-modal'
 
-class TaskList extends React.Component {
-  render() {
-    const {app} = this.props;
-    const tasks = app.state.tasks
+//タスク一覧
+function TaskList(props) {
+    const {app} = props;
+    const tasks = app.state.tasks;
+    const rendTask = (task, app) => {
+      return (
+        <TaskElement task={task} app={app}/>
+      );
+    }
+
     return (
       tasks.map((task) => {
         return (
           <div class="task-element-edge">
-            {this.rendtask(task, app)}
+            {rendTask(task, app)}
           </div>
         );
       })
     );
-  }
-
-  rendtask(task, app) {
-    return (
-      <TaskElement task={task} app={app}/>
-    );
-  }
-
 }
 
+//1タスクごとの表示
 function TaskElement(props) {
   var {task, app} = props;
   const tasks = app.state.tasks;

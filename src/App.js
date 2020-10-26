@@ -22,8 +22,7 @@ class App extends React.Component {
           <CreateTaskButton app={this}/>
         </header>
         <div id="main">
-          <TaskList 
-            tasks={this.state.tasks} app={this}/>
+          <TaskList app={this}/>
         </div>
       </div>
     );
