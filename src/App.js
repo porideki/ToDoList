@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import TaskList from './taskList';
 import Modal from 'react-modal';
+import TaskList from './taskList';
 import './App.css';
 
 class App extends React.Component {
@@ -9,11 +9,7 @@ class App extends React.Component {
     tasks: []
   }
 
-  constructor(props) {
-    super(props);
-    this.addTask = this.addTask.bind(this);
-  }
-
+  //表示内容
   render() {
     return (
       <div>
@@ -99,11 +95,11 @@ function CreateTaskButton(props) {
           <h3>New Task</h3>
           <div>
             <h4>Task Name</h4>
-            <input id="task-title-input" type="text" placeholder="input task title" value={taskTitle} onChange={(event) => {setTaskTitle(event.target.value)}}/>
+            <input type="text" placeholder="input task title" value={taskTitle} onChange={(event) => {setTaskTitle(event.target.value)}}/>
           </div>
           <div>
             <h4>Description</h4>
-            <input id="task-description-input" type="text" placeholder="input task description" value={taskDescription} onChange={(event) => {setTaskDescription(event.target.value)}}/>
+            <input type="text" placeholder="input task description" value={taskDescription} onChange={(event) => {setTaskDescription(event.target.value)}}/>
           </div>
           <div>
             <button onClick={closeModal}>cansel</button>

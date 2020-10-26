@@ -30,6 +30,7 @@ function TaskElement(props) {
   //タスク操作
   const [taskTitle, setTaskTitle] = useState("");
   const [taskDescription, setTaskDescription] = useState("");
+
   //タスク削除
   const onClickDelete = (event) => {
     //ボタンの属性からタスクIDを取得
@@ -42,6 +43,8 @@ function TaskElement(props) {
       }
     });
   };
+
+  //タスクの編集
   const handleTaskSubmit = (event) => {
     app.editTask(
       task, 
@@ -64,6 +67,7 @@ function TaskElement(props) {
   };
   const closeModal = () => {setIsOpenModal(false)};
 
+  //表示内容
   return (
     <div class="task-element">
       {/* タスク表示 */}
@@ -79,11 +83,11 @@ function TaskElement(props) {
           <h3>Edit Task</h3>
           <div>
             <h4>Task Name</h4>
-            <input id="task-title-input" type="text" placeholder="input task title" value={taskTitle} onChange={(event) => {setTaskTitle(event.target.value)}}/>
+            <input type="text" placeholder="input task title" value={taskTitle} onChange={(event) => {setTaskTitle(event.target.value)}}/>
           </div>
           <div>
             <h4>Description</h4>
-            <input id="task-description-input" type="text" placeholder="input task description" value={taskDescription} onChange={(event) => {setTaskDescription(event.target.value)}}/>
+            <input type="text" placeholder="input task description" value={taskDescription} onChange={(event) => {setTaskDescription(event.target.value)}}/>
           </div>
           <div>
             <button onClick={closeModal}>cansel</button>
