@@ -41,22 +41,15 @@ function TaskElement(props) {
     });
   };
   const handleTaskSubmit = (event) => {
-    //更新対象のタスクのインデクスを取得
-    var targetIndex = 0;
-    tasks.forEach((element, index) => {
-      //更新対象のタスクに一致
-      if(element.id == task.id){
-        targetIndex = index;
-      }
-    });
-    //上書き
-    tasks[targetIndex] = {
-      id:task.id,
+    //新しいタスク
+    var newTask = {
+      id: task.id,
       title:event.target.getAttribute("title"),
       description:event.target.getAttribute("description")
     }
-    //リストに反映
-    app.setState({tasks:tasks});
+    //変更
+    app.editTask(task, newTask);
+    
     closeModal();
   };
   //モーダル関係

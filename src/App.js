@@ -47,6 +47,22 @@ class App extends React.Component {
     this.setState({tasks: newTask});
   }
 
+  //タスクの編集(編集前タスク, 編集後タスク)
+  editTask(oldTask, newTask) {
+    const tasksBuf = this.state.tasks;
+    //編集前タスクのインデクスを取得
+    var taskIndex = 0;
+    for(let index=0; index < tasksBuf.length; index++){
+      if(tasksBuf[index].id == oldTask.id){
+        taskIndex = index;
+        break;
+      }
+    }
+    //編集後タスクで上書きして反映
+    tasksBuf[taskIndex] = newTask;
+    this.setState({tasks: tasksBuf});
+  }
+
 }
 
 function CreateTaskButton(props) {
