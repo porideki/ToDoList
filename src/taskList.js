@@ -26,9 +26,11 @@ function TaskList(props) {
 function TaskElement(props) {
   var {task, app} = props;
   const tasks = app.state.tasks;
+
   //タスク操作
   const [taskTitle, setTaskTitle] = useState("");
   const [taskDescription, setTaskDescription] = useState("");
+  //タスク削除
   const onClickDelete = (event) => {
     //ボタンの属性からタスクIDを取得
     var target = event.target;
@@ -41,17 +43,18 @@ function TaskElement(props) {
     });
   };
   const handleTaskSubmit = (event) => {
-    //新しいタスク
-    var newTask = {
-      id: task.id,
-      title:event.target.getAttribute("title"),
-      description:event.target.getAttribute("description")
-    }
-    //変更
-    app.editTask(task, newTask);
+    app.editTask(
+      task, 
+      { //新しいタスク
+        id: task.id,
+        title:event.target.getAttribute("title"),
+        description:event.target.getAttribute("description")
+      }
+    );
     
     closeModal();
   };
+
   //モーダル関係
   const [isOpenModal, setIsOpenModal] = useState(false);
   const openModal = () => {

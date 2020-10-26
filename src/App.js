@@ -28,7 +28,7 @@ class App extends React.Component {
     );
   }
 
-
+  //タスクの追加
   addTask(task) {
     //直接pushしようとするとエラー
     const tasksBuf = this.state.tasks;
