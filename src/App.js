@@ -26,7 +26,6 @@ class App extends React.Component {
 
   //タスクの追加
   addTask(task) {
-    //直接pushしようとするとエラー
     const tasksBuf = this.state.tasks;
     tasksBuf.push(task);
     this.setState({tasks: tasksBuf});
@@ -34,13 +33,13 @@ class App extends React.Component {
 
   //タスクの削除
   delTask(task) {
-    var newTask = []
+    var newTasks = []
     this.state.tasks.forEach((element) => {
       if(element.id != task.id) {
-        newTask.push(element);
+        newTasks.push(element);
       }
     });
-    this.setState({tasks: newTask});
+    this.setState({tasks: newTasks});
   }
 
   //タスクの編集(編集前タスク, 編集後タスク)

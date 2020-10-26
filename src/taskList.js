@@ -34,14 +34,14 @@ function TaskElement(props) {
   //タスク削除
   const onClickDelete = (event) => {
     //ボタンの属性からタスクIDを取得
-    var target = event.target;
-    var id = target.getAttribute("taskid");
-    tasks.forEach((element) => {
+    var id = event.target.getAttribute("taskid");
+    for(let index = 0; index < tasks.length; index++) {
       //タスクIDが削除対象IDと一致
-      if(element.id == id){
-        app.delTask(element);
+      if(tasks[index].id == id){
+        app.delTask(task);
+        break;
       }
-    });
+    }
   };
 
   //タスクの編集
