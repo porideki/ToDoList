@@ -62,7 +62,38 @@ header {
   text-decoration: underline;
 }
 
+.task-title-desc {
+  width: calc(100% - 64px);
+}
 
+.task-title-desc * {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Modal */
+.modal-frame div {
+  margin-top: 8px;
+}
+
+.modal-title {
+  border-bottom: 2px solid #555;
+}
+
+.modal-input {
+  width: 100%;
+}
+
+.modal-submit {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-button {
+  margin-left: 8px;
+  padding: 4px;
+}
 
 
 

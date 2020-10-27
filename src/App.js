@@ -99,19 +99,21 @@ function CreateTaskButton(props) {
       <Modal
       isOpen={isOpenModal}
       onRequestClose={closeModal}>
-          <h3>New Task</h3>
+        <div class="modal-frame">
+          <h3 class="modal-title">New Task</h3>
           <div>
-            <h4>Task Name</h4>
-            <input type="text" placeholder="input task title" value={taskTitle} onChange={(event) => {setTaskTitle(event.target.value)}}/>
+            <h4 class="modal-input-title">Task Name:</h4>
+            <input class="modal-input" type="text" placeholder="input task title" value={taskTitle} onChange={(event) => {setTaskTitle(event.target.value)}}/>
           </div>
           <div>
-            <h4>Description</h4>
-            <input type="text" placeholder="input task description" value={taskDescription} onChange={(event) => {setTaskDescription(event.target.value)}}/>
+            <h4 class="modal-input-title">Description:</h4>
+            <input class="modal-input" type="text" placeholder="input task description" value={taskDescription} onChange={(event) => {setTaskDescription(event.target.value)}}/>
           </div>
-          <div>
-            <button onClick={closeModal}>cansel</button>
-            <button onClick={handleTaskSubmit} title={taskTitle} description={taskDescription}>add</button>
+          <div class="modal-submit">
+            <button class="modal-button" onClick={closeModal}>cansel</button>
+            <button class="modal-button" onClick={handleTaskSubmit} title={taskTitle} description={taskDescription}>add</button>
           </div>
+        </div>
       </Modal>
     </div>
   );

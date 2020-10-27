@@ -74,8 +74,8 @@ function TaskElement(props) {
     <div class="task-element">
       {/* タスク表示 */}
       <div class="task-title-desc" onClick={openModal}>
-        <h2 class="task-title">{task.title}</h2>
-        <p class="task-description">{task.description}</p>
+        <h2>{task.title}</h2>
+        <p>{task.description}</p>
       </div>
       <img class="button" 
         src={delIcon} width={48} height={48}
@@ -84,19 +84,21 @@ function TaskElement(props) {
       <Modal
       isOpen={isOpenModal}
       onRequestClose={closeModal}>
-          <h3>Edit Task</h3>
+        <div class="modal-frame">
+          <h3 class="modal-title">Edit Task</h3>
           <div>
-            <h4>Task Name</h4>
-            <input type="text" placeholder="input task title" value={taskTitle} onChange={(event) => {setTaskTitle(event.target.value)}}/>
+            <h4 class="modal-input-title">Task Name</h4>
+            <input class="modal-input" type="text" placeholder="input task title" value={taskTitle} onChange={(event) => {setTaskTitle(event.target.value)}}/>
           </div>
           <div>
-            <h4>Description</h4>
-            <input type="text" placeholder="input task description" value={taskDescription} onChange={(event) => {setTaskDescription(event.target.value)}}/>
+            <h4 class="modal-input-title">Description</h4>
+            <input class="modal-input" type="text" placeholder="input task description" value={taskDescription} onChange={(event) => {setTaskDescription(event.target.value)}}/>
           </div>
           <div>
-            <button onClick={closeModal}>cansel</button>
-            <button onClick={handleTaskSubmit} title={taskTitle} description={taskDescription}>confirm</button>
+            <button class="modal-button" onClick={closeModal}>cansel</button>
+            <button class="modal-button" onClick={handleTaskSubmit} title={taskTitle} description={taskDescription}>confirm</button>
           </div>
+        </div>
       </Modal>
     </div>
   );
