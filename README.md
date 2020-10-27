@@ -1,3 +1,21 @@
+# 実行方法
+## 1.[Releace](https://github.com/porideki/ToDoList/releases)からtodolist.zipをダウンロードし、zip内のbuildフォルダを任意の場所に展開する。  
+## 2.展開したbuildフォルダ内でWebサーバーを建て、ブラウザからアクセスする  
+### npm http-serverで建てる場合
+  > cd <buildディレクトリ>  
+  > npm install -g http-derver  
+  > hs  
+  
+  hsコマンド実行後に表示されたアドレスにブラウザからアクセスする。(おそらく <http://localhost:8080>)  
+
+### pythonで建てる場合  
+> cd <buildディレクトリ>  
+> python -m http.server
+
+  コマンド実行後に表示されたアドレスにブラウザからアクセスする。(おそらく <http://localhost:8000>)
+
+ここからCreate-React-AppのReadme.mdテンプレート (cloneした場合の実行方法)  
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
