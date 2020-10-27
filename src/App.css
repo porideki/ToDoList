@@ -26,9 +26,7 @@ header {
 }
 
 .add-button {
-  margin-right: 16px;
-  text-align: center;
-  font-size: 3em;
+  margin: 16px;
   cursor: pointer;
 }
 
@@ -55,7 +53,7 @@ header {
 }
 
 .task-del-button {
-  font-size: 1.5em;
+  margin: 16px;
   cursor: pointer;
 }
 

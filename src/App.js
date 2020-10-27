@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import Modal from 'react-modal';
 import TaskList from './taskList';
 import './App.css';
+//画像
+import addIcon from './images/addIcon.png'
 
 class App extends React.Component {
 
@@ -90,7 +92,9 @@ function CreateTaskButton(props) {
   return (
     <div>
       {/* 通常の表示 */}
-      <div class="add-button" onClick={openModal}>+</div>
+      <img class="add-button" 
+        src={addIcon} width={32} height={32} 
+        onClick={openModal}/>
       {/* モーダルウィンドウ */}
       <Modal
       isOpen={isOpenModal}

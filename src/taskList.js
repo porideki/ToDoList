@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import Modal from 'react-modal'
+//画像
+import delIcon from './images/delIcon.png'
 
 //タスク一覧
 function TaskList(props) {
@@ -75,7 +77,9 @@ function TaskElement(props) {
         <h2 class="task-title">{task.title}</h2>
         <p class="task-description">{task.description}</p>
       </div>
-      <div class="task-del-button" taskid={task.id} onClick={(event)=>onClickDelete(event)}>x</div>
+      <img class="task-del-button" 
+        src={delIcon} width={32} height={32}
+        taskid={task.id} onClick={(event)=>onClickDelete(event)}/>
       {/* モーダルウィンドウ */}
       <Modal
       isOpen={isOpenModal}
