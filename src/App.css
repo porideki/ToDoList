@@ -25,9 +25,15 @@ header {
   margin: 4px;
 }
 
-.add-button {
-  margin: 16px;
+.button {
+  margin: 8px;
+  padding: 8px;
   cursor: pointer;
+}
+
+.button:hover {
+  background-color: #aaa;
+  border-radius: 8px;
 }
 
 #main {
@@ -52,9 +58,8 @@ header {
   cursor: pointer;
 }
 
-.task-del-button {
-  margin: 16px;
-  cursor: pointer;
+.task-element:hover {
+  text-decoration: underline;
 }
 
 

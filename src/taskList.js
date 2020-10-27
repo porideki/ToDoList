@@ -77,8 +77,8 @@ function TaskElement(props) {
         <h2 class="task-title">{task.title}</h2>
         <p class="task-description">{task.description}</p>
       </div>
-      <img class="task-del-button" 
-        src={delIcon} width={32} height={32}
+      <img class="button" 
+        src={delIcon} width={48} height={48}
         taskid={task.id} onClick={(event)=>onClickDelete(event)}/>
       {/* モーダルウィンドウ */}
       <Modal

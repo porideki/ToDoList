@@ -92,8 +92,8 @@ function CreateTaskButton(props) {
   return (
     <div>
       {/* 通常の表示 */}
-      <img class="add-button" 
-        src={addIcon} width={32} height={32} 
+      <img class="button" 
+        src={addIcon} width={48} height={48} 
         onClick={openModal}/>
       {/* モーダルウィンドウ */}
       <Modal
