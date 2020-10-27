@@ -1,4 +1,6 @@
-# 実行方法
+# 実行方法(Github Pages)
+### [このページ](https://porideki.github.io/ToDoList/)にアクセス  
+# 実行方法(ローカルサーバー)
 ## 1.[Releace](https://github.com/porideki/ToDoList/releases)からtodolist.zipをダウンロードし、zip内のbuildフォルダを任意の場所に展開する。  
 ## 2.展開したbuildフォルダ内でWebサーバーを建て、ブラウザからアクセスする  
 ### npm http-serverで建てる場合
