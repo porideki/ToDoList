@@ -73,6 +73,10 @@ header {
 }
 
 /* Modal */
+.ReactModal__Content {
+  height: fit-content;
+}
+
 .modal-frame div {
   margin-top: 8px;
 }

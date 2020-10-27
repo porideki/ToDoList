@@ -87,16 +87,16 @@ function TaskElement(props) {
         <div class="modal-frame">
           <h3 class="modal-title">Edit Task</h3>
           <div>
-            <h4 class="modal-input-title">Task Name</h4>
+            <h4 class="modal-input-title">Task Name:</h4>
             <input class="modal-input" type="text" placeholder="input task title" value={taskTitle} onChange={(event) => {setTaskTitle(event.target.value)}}/>
           </div>
           <div>
-            <h4 class="modal-input-title">Description</h4>
+            <h4 class="modal-input-title">Description:</h4>
             <input class="modal-input" type="text" placeholder="input task description" value={taskDescription} onChange={(event) => {setTaskDescription(event.target.value)}}/>
           </div>
-          <div>
+          <div class="modal-submit">
             <button class="modal-button" onClick={closeModal}>cansel</button>
-            <button class="modal-button" onClick={handleTaskSubmit} title={taskTitle} description={taskDescription}>confirm</button>
+            <button class="modal-button" onClick={handleTaskSubmit} title={taskTitle} description={taskDescription}>apply</button>
           </div>
         </div>
       </Modal>
