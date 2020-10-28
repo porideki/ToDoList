@@ -5,7 +5,7 @@
 ## 2.展開したbuildフォルダ内でWebサーバーを建て、ブラウザからアクセスする  
 ### npm http-serverで建てる場合
   > cd <buildディレクトリ>  
-  > npm install -g http-derver  
+  > npm install -g http-erver  
   > hs  
   
   hsコマンド実行後に表示されたアドレスにブラウザからアクセスする。(おそらく <http://localhost:8080>)  
